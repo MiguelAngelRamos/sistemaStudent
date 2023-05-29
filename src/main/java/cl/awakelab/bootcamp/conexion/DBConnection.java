@@ -9,7 +9,7 @@ public class DBConnection {
   private static final String PORT = "3306";
   private static final String LOGIN = "root";
   private static final String PASSWORD = "academyjava";
-  private static final String URL_CONEXION = "jdbc:mysql://localhost:"+PORT+"/"+DB; 
+  private static final String URL_CONEXION = "jdbc:mysql://localhost:"+PORT+"/"+DB;
   // jdbc:mysql://localhost:3306/bootcamp
   
   // PATRON SINGLETON
@@ -21,7 +21,7 @@ public class DBConnection {
       
       Class.forName("com.mysql.cj.jdbc.Driver"); // utilizamos el driver o cargamos el driver
       // Class.forName("org.mariadb.jdbc.Driver");
-      connection = DriverManager.getConnection(URL_CONEXION,LOGIN,PASSWORD);
+      connection = DriverManager.getConnection(URL_CONEXION, LOGIN, PASSWORD);
       
       if(connection != null) {
         System.out.println("La conexión a : " + DB + " ha sido exitosa");
@@ -42,6 +42,11 @@ public class DBConnection {
   }
   
   
+  public Connection getConnection() {
+    return connection;
+  }
+  
+
   public void disconnect() {
     if(connection != null ) {
       try {
