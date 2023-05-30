@@ -1,67 +1,40 @@
 package cl.awakelab.bootcamp.model.entity;
 
-import java.io.Serializable;
-
-public class User implements Serializable{
+public class User {
   
-  private int id;
-  private String name;
-  private String lastname; 
-  private String email;
+  private String userName;
+  private String passWord;
   
   public User() {
-
-  } 
-  
-  public User(int id, String name, String lastname, String email) {
-
-    this.id = id;
-    this.name = name;
-    this.lastname = lastname;
-    this.email = email;
-  }
-
-  public int getId() {
-    return id;
-  }
-
-  public void setId(int id) {
-    this.id = id;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getLastname() {
-    return lastname;
-  }
-
-  public void setLastname(String lastname) {
-    this.lastname = lastname;
-  }
-
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
+    
   }
   
-  
+  public User(String userName, String passWord) {
+    super();
+    this.userName = userName;
+    this.passWord = passWord;
+  }
+
+  public String getUserName() {
+    return userName;
+  }
+
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
+
+  public String getPassWord() {
+    return passWord;
+  }
+
+  public void setPassWord(String passWord) {
+    this.passWord = passWord;
+  }
+
   @Override
   public String toString() {
-    return "User [id=" + id + ", name=" + name + ", lastname=" + lastname + ", email=" + email + "]";
+    return "User [userName=" + userName + ", passWord=" + passWord + "]";
   }
-
-  /**
-   * 
-   */
-  private static final long serialVersionUID = 1L;
-
+  
+  
 }

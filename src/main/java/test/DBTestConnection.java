@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 import cl.awakelab.bootcamp.conexion.DBConnection;
-import cl.awakelab.bootcamp.model.entity.User;
+import cl.awakelab.bootcamp.model.entity.Usuarios;
 
 public class DBTestConnection {
   
@@ -15,7 +15,7 @@ public class DBTestConnection {
   }
   
   public static void main(String[] args) {
-    DBTestConnection dbTestConnection = new DBTestConnection();
+    new DBTestConnection();
     findAllStudents();
  
   }
@@ -34,7 +34,8 @@ public class DBTestConnection {
         String lastname = resultSet.getString("lastname");
         String email = resultSet.getString("email");
         
-        User user = new User(id, name, lastname, email);
+   
+        Usuarios user = new Usuarios(id, name, lastname, email);
         System.out.println(user.toString());
       }
     } catch (Exception e) {
