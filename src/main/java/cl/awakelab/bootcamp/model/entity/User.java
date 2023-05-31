@@ -2,39 +2,41 @@ package cl.awakelab.bootcamp.model.entity;
 
 public class User {
   
-  private String userName;
-  private String passWord;
+  private String username;
+  private String password;
   
   public User() {
     
   }
-  
-  public User(String userName, String passWord) {
+
+  public User(String username, String password) {
     super();
-    this.userName = userName;
-    this.passWord = passWord;
+    this.username = username;
+    this.password = password;
   }
 
-  public String getUserName() {
-    return userName;
+  public String getUsername() {
+    return username;
   }
 
-  public void setUserName(String userName) {
-    this.userName = userName;
+  public void setUsername(String username) {
+    this.username = username;
   }
 
-  public String getPassWord() {
-    return passWord;
+  public String getPassword() {
+    return password;
   }
 
-  public void setPassWord(String passWord) {
-    this.passWord = passWord;
+  public void setPassword(String password) {
+    this.password = password;
   }
 
   @Override
   public String toString() {
-    return "User [userName=" + userName + ", passWord=" + passWord + "]";
+    return "User [username=" + username + ", password=" + password + "]";
   }
+ 
+  
   
   
 }
