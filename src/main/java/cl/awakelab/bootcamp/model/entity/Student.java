@@ -2,18 +2,18 @@ package cl.awakelab.bootcamp.model.entity;
 
 import java.io.Serializable;
 
-public class Usuarios implements Serializable{
+public class Student implements Serializable{
   
   private int id;
   private String name;
   private String lastname; 
   private String email;
   
-  public Usuarios() {
+  public Student() {
 
   } 
   
-  public Usuarios(int id, String name, String lastname, String email) {
+  public Student(int id, String name, String lastname, String email) {
 
     this.id = id;
     this.name = name;
