@@ -8,6 +8,9 @@
     <meta charset="UTF-8">
     <title>Listado de Estudiantes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"  rel="stylesheet">
+    <!-- Font Awesome -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	 <!-- /Font Awesome -->
   </head>
 
 <body>
@@ -25,6 +28,7 @@
                         <th scope="col">Name</th>
                         <th scope="col">Lastname</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Actions</th>
                       </tr>
                     </thead>
                     <tbody class="table-group-divider">
@@ -38,6 +42,10 @@
                         <td><%= s.getName()%></td>
                         <td><%= s.getLastname()%></td>
                         <td><%= s.getEmail()%></td>
+                        <td>
+                         <a class="text-success" href=""><i class="fa-solid fa-pen-to-square mx-3"></i></a>	 
+ 						 <a class="text-danger" href="ServeltCrudStudent?option=deleteStudent&idStudent=<%=s.getId()%>"><i class="fa-solid fa-trash"></i></a>
+                        </td>
                       </tr>
                       <!-- fin del for de java -->
                       
