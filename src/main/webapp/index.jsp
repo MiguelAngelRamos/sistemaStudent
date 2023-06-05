@@ -5,18 +5,18 @@
 <head>
 	<meta charset="UTF-8">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"  rel="stylesheet">
-	
+	<link rel="stylesheet" href="css/styles.css">
 	<title>Login</title>
 </head>
-<body>
-	<div class="container">
+<body class="fondo">
+	<div class="container mt-5">
 		<h1 class="text-center">Inicie Sesión</h1>
 	
    	<!-- Codigo del Formulario Login -->
 		 <div class="row mt-5">
 		    <div class="col-4 offset-4">
 		    
-		      <form id="form-login">
+		      <form class="fondo-form" id="form-login">
 		        <div class="mb-3">
 		          <label for="user" class="form-label">Usuario</label>
 		          <input

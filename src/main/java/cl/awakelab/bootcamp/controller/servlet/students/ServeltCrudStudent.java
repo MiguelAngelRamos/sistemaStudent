@@ -23,6 +23,7 @@ public class ServeltCrudStudent extends HttpServlet {
     StudentController studentController = new StudentController();
     String url = "index.jsp";
     System.out.println(option);
+    
     switch (option) {
       case "deleteStudent":
         int idDelete = Integer.parseInt(request.getParameter("idStudent"));
