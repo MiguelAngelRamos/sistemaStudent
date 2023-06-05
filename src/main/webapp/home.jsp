@@ -31,7 +31,7 @@
                         <li> Tu Coordinadora (Tutora Administrativa) es <strong><a
                                     href="mailto:macarena.gallardo@fudesco.cl" target="_blank">Macarena
                                     Gallardo</a></strong></li>
-                        <li>• Debes iniciar sesión en la web de SENCE con tu RUT y Clave Única, así se marcará tu
+                        <li> Debes iniciar sesión en la web de SENCE con tu RUT y Clave Única, así se marcará tu
                             asistencia dentro del Nodo, luego podrás tener acceso al curso.<br></li>
                     </ul>
                     <div><span id="label_content_63800">
