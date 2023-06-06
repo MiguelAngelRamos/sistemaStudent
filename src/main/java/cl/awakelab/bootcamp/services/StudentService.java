@@ -9,7 +9,9 @@ import cl.awakelab.bootcamp.conexion.DBConnection;
 import cl.awakelab.bootcamp.model.entity.Student;
 
 public class StudentService {
-
+  
+  DBConnection conexion = DBConnection.getInstance();
+  
   public List<Student> findAllStundents() {
     
     List<Student> students = new ArrayList<>();
@@ -54,4 +56,53 @@ public class StudentService {
     }
      
   }
+  
+  public Student findByIdStudent(int id) {
+    
+    Student student = null;
+    String sql = "SELECT * FROM students WHERE id = ?";
+    
+    try {
+      
+      PreparedStatement statement = conexion.getConnection().prepareStatement(sql);
+      statement.setInt(1, id);
+      ResultSet rs = statement.executeQuery();
+      
+      if(rs.next()) {
+        String name = rs.getString("name");
+        String lastname = rs.getString("lastname");
+        String email = rs.getString("email");
+        
+        student = new Student(id, name, lastname, email );
+        
+      }
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+    
+    return student;
+  }
+  
+  
+  public Student updateStudent(Student student) {
+    
+    String sql = "UPDATE students SET name = ?, lastname = ?, email = ? WHERE id = ?";
+    
+    try {
+      PreparedStatement statement = conexion.getConnection().prepareStatement(sql);
+      statement.setString(1, student.getName());
+      statement.setString(2, student.getLastname());
+      statement.setString(3, student.getEmail());
+      statement.setInt(4, student.getId());
+      // statement.executeQuery(); // aqui estaba el error!! es Update
+      statement.executeUpdate();
+      
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+    
+    return student;
+  }
+  
+  
 }

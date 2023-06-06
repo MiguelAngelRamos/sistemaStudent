@@ -43,7 +43,8 @@
                         <td><%= s.getLastname()%></td>
                         <td><%= s.getEmail()%></td>
                         <td>
-                         <a class="text-success" href=""><i class="fa-solid fa-pen-to-square mx-3"></i></a>	 
+                         <a class="text-success" href="ServeltCrudStudent?option=formUpdateStudent&idStudent=<%=s.getId()%>"><i class="fa-solid fa-pen-to-square mx-3"></i></a>	 
+                         
  						 <a class="text-danger" href="ServeltCrudStudent?option=deleteStudent&idStudent=<%=s.getId()%>"><i class="fa-solid fa-trash"></i></a>
                         </td>
                       </tr>

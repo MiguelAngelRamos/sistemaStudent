@@ -18,7 +18,6 @@ public class StudentController implements IStudentController {
 
   @Override
   public Student saveStudent(Student student) {
-    // TODO Auto-generated method stub
     return null;
   }
 
@@ -36,14 +35,12 @@ public class StudentController implements IStudentController {
 
   @Override
   public Student updateStudent(Student student) {
-    // TODO Auto-generated method stub
-    return null;
+    return studentService.updateStudent(student);
   }
 
   @Override
   public Student findByIdStudent(int id) {
-    // TODO Auto-generated method stub
-    return null;
+    return studentService.findByIdStudent(id);
   }
 
 }
